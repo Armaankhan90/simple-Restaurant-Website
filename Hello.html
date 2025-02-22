@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: url(pizza.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        nav {
+            width: 100%;
+            height: 70px;
+            padding: 0 70px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 2em;
+            letter-spacing: 2px;
+            margin: 2px;
+        }
+
+        .logo span {
+            color: brown;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: brown;
+        }
+
+        .menu a:last-child {
+            background: brown;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+
+        .h-text {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            padding: 15px;
+        }
+
+        .h-text p {
+            color: #262626;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .h-text h1 {
+            font-size: 4em;
+            line-height: 1.5;
+        }
+
+        .h-text h1 span {
+            color: brown;
+        }
+
+        .h-text h2 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        #order, #dis {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        #order {
+            background: brown;
+        }
+
+        #dis {
+            background: #262626;
+        }
+
+        #pizza {
+            position: absolute;
+            bottom: 15%;
+            left: 5%;
+            display: flex;
+            gap: 10px;
+        }
+
+        #pizza img {
+            width: 120px;
+            transition: 0.4s ease;
+        }
+
+        #pizza img:hover {
+            transform: translateY(-10px);
+        }
+        
+
+        @media (max-width: 768px) {
+            .h-text h1 {
+                font-size: 2.5em;
+            }
+            .h-text h2 {
+                font-size: 2em;
+            }
+            nav {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                padding: 20px;
+            }
+            .menu {
+                margin-top: 10px;
+            }
+            .menu a {
+                display: block;
+                margin: 5px 0;
+                padding-right: 0%;
+            }
+            #pizza {
+                position: relative;
+                justify-content: center;
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+    <div class="logo">Piza<span>hat</span></div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Foods</a>
+                <a href="#">Offers</a>
+                <a href="#">Your Order</a>
+                <a href="#">Delivery</a>
+                <a href="#">Cart</a>
+            </div>
+        </nav>
+        <div class="h-text">
+            <p>Free Home Delivery</p>
+            <h1>Quality F<span>oo</span>dis</h1>
+            <h2>Pizza of the Week</h2>
+        <a href="#" id="order">Order Now!</a>
+        <a href="#" id="dis">25% off Hurry!!</a>
+        </div>
+        <div id="pizza">
+            <img src="pizza.webp" alt="Pizza">
+            <img src="pizza.webp" alt="Pizza">
+            <img src="pizza.webp" alt="Pizza">
+        </div>
+    </header>
+</body>
+</html>
